@@ -3,7 +3,7 @@ python:
   - "3.6"
 install:
   - pip install -r requirements_dev.txt
-  - pip install -e .dd
+  - pip install -e .
 
 script:
   - flake8 .

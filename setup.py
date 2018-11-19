@@ -5,9 +5,10 @@ setup(
     packages = ['filepy'],
     version = '0.1', 
     description = 'File converter',
-    author = '',
-    author_email = '',
-    url = '',
-    download_url = 'download link you saved',
+    author = 'KordianD',
+    author_email = 'not_valid@gmail.com',
+    url = 'https://github.com/KordianD/filepy',
     keywords = ['file', 'convert', 'extensions', 'csv', 'arff'],
+    classifiers = ['Programming Language :: Python :: 3', 
+                   'License :: OSI Approved :: MIT License']
 )

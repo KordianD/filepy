@@ -1,5 +1,6 @@
-from filepy.ArffFormat import ArffFormat
 import pytest
+
+from filepy.ArffFormat import ArffFormat
 
 TEST_FILENAME = 'test'
 

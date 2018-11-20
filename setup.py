@@ -3,7 +3,7 @@ from distutils.core import setup
 setup(
     name='filepy',
     packages=['filepy'],
-    version='0.1',
+    version='0.11',
     description='File converter',
     author='KordianD',
     author_email='not_valid@gmail.com',

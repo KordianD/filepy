@@ -1,4 +1,4 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
     name='filepy',
@@ -9,6 +9,7 @@ setup(
     author_email='not_valid@gmail.com',
     url='https://github.com/KordianD/filepy',
     keywords=['file', 'convert', 'extensions', 'csv', 'arff'],
+    setup_requires=["numpy"],
     install_requires=['numpy'],
     long_description=open('README.md').read(),
     classifiers=['Programming Language :: Python :: 3',

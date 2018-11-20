@@ -4,8 +4,9 @@ class ArffReader:
         self.relation = None
         self.attributes = []
         self.data = []
+        self._analyse()
 
-    def analyse(self):
+    def _analyse(self):
         is_collecting_data = False
         for line in open(self.path_to_file):
             if line.strip() == [] or line.startswith('%'):

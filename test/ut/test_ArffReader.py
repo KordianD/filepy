@@ -12,7 +12,8 @@ def arff_reader():
 
 def test_when_line_contains_data_declaration_is_line_containing_declaration_should_return_true(arff_reader):
     line_with_data_declaration = '@data'
-    assert arff_reader.is_line_containing_declaration(line_with_data_declaration, 'data')
+    assert arff_reader.is_line_containing_declaration(
+        line_with_data_declaration, 'data')
 
 
 def test_when_line_is_empty_is_line_containing_declaration_should_return_false(arff_reader):

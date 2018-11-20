@@ -9,6 +9,7 @@ setup(
     author_email='not_valid@gmail.com',
     url='https://github.com/KordianD/filepy',
     keywords=['file', 'convert', 'extensions', 'csv', 'arff'],
+    install_requires=['numpy'],
     classifiers=['Programming Language :: Python :: 3',
                  'License :: OSI Approved :: MIT License']
 )

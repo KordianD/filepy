@@ -23,5 +23,3 @@ class ArffReader:
     @staticmethod
     def is_line_containing_declaration(line, declaration):
         return line.strip() and line.split()[0].lower() == '@' + declaration
-
-

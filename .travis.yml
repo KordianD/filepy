@@ -6,6 +6,4 @@ install:
   - pip install -e .
 
 script:
-  - flake8 . --max-line-length 119
-  - pytest -v
-  - py.test --cov filepy test
+  - make test

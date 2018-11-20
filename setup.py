@@ -10,6 +10,7 @@ setup(
     url='https://github.com/KordianD/filepy',
     keywords=['file', 'convert', 'extensions', 'csv', 'arff'],
     install_requires=['numpy'],
+    long_description=open('README.md').read(),
     classifiers=['Programming Language :: Python :: 3',
                  'License :: OSI Approved :: MIT License']
 )

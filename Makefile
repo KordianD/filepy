@@ -6,8 +6,9 @@ fix:
 
 test:
 	pytest -v
-	flake8 . --max-line-length 120
 	py.test --cov filepy test
+	flake8 . --max-line-length 120
+	pylint --rcfile=standard.rc filepy test
 
 clean:
 	find . -name '*.pyc' -exec rm --force {} +

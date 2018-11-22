@@ -13,8 +13,7 @@ TEST_DTO = DTO(data=data, columns=columns)
 
 def test_should_correctly_save_file():
     arff_writer = ArffWriter(path_to_file=TEST_FILE)
-    arff_writer.dto = TEST_DTO
 
-    arff_writer.write()
+    arff_writer.write(TEST_DTO)
     assert filecmp.cmp(TEST_FILE, CORRECT_FILE)
     os.remove(TEST_FILE)

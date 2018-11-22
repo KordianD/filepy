@@ -3,3 +3,6 @@ pytest-cov
 flake8
 numpy
 autopep8
+pylint
+mypy
+pyflakes

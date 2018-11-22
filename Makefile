@@ -9,6 +9,8 @@ test:
 	py.test --cov filepy test
 	flake8 . --max-line-length 120
 	pylint --rcfile=standard.rc filepy test
+	mypy --strict-optional filepy
+	pyflakes .
 
 clean:
 	find . -name '*.pyc' -exec rm --force {} +

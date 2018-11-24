@@ -4,5 +4,13 @@
 # Goal
 This is a package which converts files to different types.
 
+# Supported extensions 
+- CSV
+- ARFF
+
 # Installation
 ``pip install filepy`` 
+
+# Usage
+
+``TODO: ADD``

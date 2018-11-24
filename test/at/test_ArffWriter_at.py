@@ -3,7 +3,7 @@ from filepy.dto import DTO
 import filecmp
 import os
 
-TEST_FILE = 'test/at/data/output/arff.txt'
+TEST_FILE = 'test/at/data/arff.txt'
 CORRECT_FILE = 'test/at/data/arff_files/writer_example_1.arff'
 
 columns = ['first', 'second', 'third']

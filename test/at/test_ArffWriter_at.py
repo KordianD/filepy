@@ -4,7 +4,7 @@ import filecmp
 import os
 
 TEST_FILE = 'test/at/data/output/arff.txt'
-CORRECT_FILE = 'test/at/data/output/correct_arff.txt'
+CORRECT_FILE = 'test/at/data/arff_files/writer_example_1.arff'
 
 columns = ['first', 'second', 'third']
 data = [['1.0', '2.0', '3.0'], ['4.0', '5.0', '6.0']]

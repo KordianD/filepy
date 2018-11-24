@@ -1,9 +1,9 @@
 class ArffReader:
     def __init__(self, path_to_file):
-        self._path_to_file = path_to_file
-        self._relation = None
-        self._attributes = []
-        self._data = []
+        self._path_to_file: str = path_to_file
+        self._relation: str = ""
+        self._attributes: list = []
+        self._data: list = []
         self._analyse()
 
     def _analyse(self):
@@ -22,5 +22,5 @@ class ArffReader:
                 self._data.append(line.strip().split(','))
 
     @staticmethod
-    def _is_line_containing_declaration(line, declaration):
+    def _is_line_containing_declaration(line: str, declaration: str):
         return line.strip() and line.split()[0].lower() == '@' + declaration

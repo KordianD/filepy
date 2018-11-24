@@ -1,4 +1,4 @@
-from filepy.aff_reader import ArffReader
+from filepy.arff_reader import ArffReader
 
 
 def test_when_line_contains_data_declaration_is_line_containing_declaration_should_return_true():

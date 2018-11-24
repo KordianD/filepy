@@ -8,7 +8,7 @@ test:
 	pytest -v
 	py.test --cov filepy test
 	flake8 . --max-line-length 120
-	pylint --rcfile=standard.rc filepy test
+	pylint --rcfile=standard.rc --disable=missing-docstring filepy test
 	mypy --strict-optional filepy
 	pyflakes .
 

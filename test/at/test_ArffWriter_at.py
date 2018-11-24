@@ -1,5 +1,5 @@
-from filepy.ArffWriter import ArffWriter
-from filepy.DTO import DTO
+from filepy.arff_writer import ArffWriter
+from filepy.dto import DTO
 import filecmp
 import os
 

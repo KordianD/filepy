@@ -3,8 +3,8 @@ from filepy.dto import DTO
 import filecmp
 import os
 
-TEST_FILE = 'test/functional_tests/data/csv.txt'
-CORRECT_FILE = 'test/functional_tests/data/csv_files/writer_example_1.csv'
+TEST_FILE = 'test/data/csv.txt'
+CORRECT_FILE = 'test/data/csv_files/writer_example_1.csv'
 
 columns = ['first', 'second', 'third']
 data = [['1.0', '2.0', '3.0'], ['4.0', '5.0', '6.0']]

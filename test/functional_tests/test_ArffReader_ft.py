@@ -1,6 +1,6 @@
 from filepy.arff_reader import ArffReader
 
-TEST_FILENAME = 'test/functional_tests/data/arff_files/reader_example_1.arff'
+TEST_FILENAME = 'test/data/arff_files/reader_example_1.arff'
 
 
 def test_correctly_read_matrix_with_column_labels():

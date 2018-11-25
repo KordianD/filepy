@@ -3,9 +3,9 @@ from filepy.dto import DTO
 import filecmp
 import os
 
-TEST_FILE = 'test/functional_tests/data/arff.txt'
+TEST_FILE = 'test/data/arff.txt'
 TEST_FILENAME = 'arff.txt'
-CORRECT_FILE = 'test/functional_tests/data/arff_files/writer_example_1.arff'
+CORRECT_FILE = 'test/data/arff_files/writer_example_1.arff'
 
 columns = ['first', 'second', 'third']
 data = [['1.0', '2.0', '3.0'], ['4.0', '5.0', '6.0']]

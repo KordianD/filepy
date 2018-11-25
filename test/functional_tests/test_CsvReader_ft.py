@@ -1,6 +1,6 @@
 from filepy.csv_reader import CsvReader
 
-TEST_FILENAME = 'test/functional_tests/data/csv_files/reader_example_1.csv'
+TEST_FILENAME = 'test/data/csv_files/reader_example_1.csv'
 
 
 def test_should_correctly_read_csv_with_column_labels():

@@ -15,20 +15,20 @@ class ArffWriter:
         return self._delimiter
 
     def write(self, dto: DTO):
-        with open(self._path_to_file, 'w') as file:
+        with open(self.path_to_file, 'w') as file:
             file.write('@relation {}\n\n'.format(
                 self._extract_filename_from_path_to_file()))
             file.write(ArffWriter._create_attributes_to_save(dto) + '\n')
 
             file.write('@data\n')
             for row in dto.data:
-                file.write("{}".format(self._delimiter).join(row) + '\n')
+                file.write("{}".format(self.delimiter).join(row) + '\n')
 
     def _extract_filename_from_path_to_file(self):
         index_of_starting_filename = self._path_to_file.rfind('/')
         if index_of_starting_filename == -1:
-            return self._path_to_file
-        return self._path_to_file[index_of_starting_filename + 1:]
+            return self.path_to_file
+        return self.path_to_file[index_of_starting_filename + 1:]
 
     @staticmethod
     def _create_attributes_to_save(dto: DTO) -> str:

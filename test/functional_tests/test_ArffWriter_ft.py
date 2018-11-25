@@ -4,6 +4,7 @@ import filecmp
 import os
 
 TEST_FILE = 'test/functional_tests/data/arff.txt'
+TEST_FILENAME = 'arff.txt'
 CORRECT_FILE = 'test/functional_tests/data/arff_files/writer_example_1.arff'
 
 columns = ['first', 'second', 'third']
@@ -17,3 +18,11 @@ def test_should_correctly_save_file():
     arff_writer.write(TEST_DTO)
     assert filecmp.cmp(TEST_FILE, CORRECT_FILE)
     os.remove(TEST_FILE)
+
+
+def test_should_correctly_save_file_with_only_filename():
+    arff_writer = ArffWriter(path_to_file=TEST_FILENAME)
+
+    arff_writer.write(TEST_DTO)
+    assert filecmp.cmp(TEST_FILENAME, CORRECT_FILE)
+    os.remove(TEST_FILENAME)

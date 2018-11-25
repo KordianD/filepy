@@ -6,7 +6,7 @@ fix:
 
 test:
 	pytest -v
-	py.test --cov filepy test
+	py.test --cov  filepy test --cov-report term-missing
 	flake8 . --max-line-length 120
 	pylint --rcfile=standard.rc --disable=missing-docstring filepy test
 	mypy --strict-optional filepy

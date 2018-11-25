@@ -12,7 +12,10 @@ class CsvReader:
     def _analyse(self):
         for index, line in enumerate(open(self._path_to_file)):
             if index == 0 and self._first_line_column_names:
-                self._column_names = line.strip().split(self._delimiter)
+                if self._skip_first_column:
+                    self._column_names = line.strip().split(self._delimiter)[1:]
+                else:
+                    self._column_names = line.strip().split(self._delimiter)
                 continue
             if self._skip_first_column:
                 self._data.append(line.strip().split(self._delimiter)[1:])

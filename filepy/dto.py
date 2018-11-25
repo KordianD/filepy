@@ -1,7 +1,8 @@
 class DTO:
-    def __init__(self, data, columns):
-        self._data = data
-        self._columns = columns
+    def __init__(self, data: list, columns: list, additional=None):
+        self._data: list = data
+        self._columns: list = columns
+        self._additional: dict = additional
 
     @property
     def data(self):
@@ -10,3 +11,7 @@ class DTO:
     @property
     def columns(self):
         return self._columns
+
+    @property
+    def additional(self):
+        return self._additional

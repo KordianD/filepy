@@ -9,7 +9,8 @@ class CsvWriter:
     def write(self, dto: DTO):
         with open(self._path_to_file, 'w') as file:
             if dto.columns:
-                file.write("{}".format(self._delimiter).join(dto.columns) + '\n')
+                file.write("{}".format(self._delimiter).join(
+                    dto.columns) + '\n')
 
             for row in dto.data:
                 file.write("{}".format(self._delimiter).join(row) + '\n')

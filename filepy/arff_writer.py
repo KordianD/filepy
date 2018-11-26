@@ -36,7 +36,7 @@ class ArffWriter:
         first_data_line = dto.data[0]
         for column, data in zip(dto.columns, first_data_line):
             attributes += "@attribute {} {}\n".format(
-                column, ArffWriter._classify_attribute(data[0]))
+                column, ArffWriter._classify_attribute(data))
         return attributes
 
     @staticmethod

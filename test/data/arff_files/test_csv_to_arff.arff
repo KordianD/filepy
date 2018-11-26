@@ -1,0 +1,13 @@
+@relation test_csv_to_arff.arff
+
+@attribute Year numeric
+@attribute Score numeric
+@attribute Title string
+
+@data
+1968,86,Greetings
+1970,17,Bloody Mama
+1970,73,Hi, Mom!
+1971,40,Born to Win
+1973,98,Mean Streets
+1973,88,Bang the Drum Slowly

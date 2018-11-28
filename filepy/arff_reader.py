@@ -1,3 +1,4 @@
+from filepy.analyse_helper import is_line_containing_declaration
 from filepy.dto import DTO
 
 
@@ -17,18 +18,14 @@ class ArffReader:
             if line.strip() == [] or line.startswith('%'):
                 is_collecting_data = False
                 continue
-            if ArffReader._is_line_containing_declaration(line, 'relation'):
+            if is_line_containing_declaration(line, 'relation'):
                 additional['relation'] = line.split()[1]
-            if ArffReader._is_line_containing_declaration(line, 'data'):
+            if is_line_containing_declaration(line, 'data'):
                 is_collecting_data = True
-            if ArffReader._is_line_containing_declaration(line, 'attribute'):
+            if is_line_containing_declaration(line, 'attribute'):
                 columns.append(line.split()[1])
                 additional['attributes'].append(line.split()[2])
-            if is_collecting_data and not ArffReader._is_line_containing_declaration(line, 'data'):
+            if is_collecting_data and not is_line_containing_declaration(line, 'data'):
                 data.append(line.strip().split(','))
 
         self.dto = DTO(data=data, columns=columns, additional=additional)
-
-    @staticmethod
-    def _is_line_containing_declaration(line: str, declaration: str):
-        return line.strip() and line.split()[0].lower() == '@' + declaration

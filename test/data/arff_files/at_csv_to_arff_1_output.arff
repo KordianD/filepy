@@ -1,0 +1,18 @@
+@relation test_csv_to_arff.arff
+
+@attribute col0 numeric
+@attribute col1 numeric
+@attribute col2 numeric
+@attribute col3 numeric
+@attribute col4 numeric
+@attribute col5 numeric
+@attribute col6 numeric
+@attribute col7 numeric
+@attribute col8 numeric
+
+@data
+142 160 28 10 5 3 60 0.28 3167
+175 180 18 8 4 1 12 0.43 4033
+129 132 13 6 3 1 41 0.33 1471
+138 140 17 7 3 1 22 0.46 3204
+232 240 25 8 4 3 5 2.05 3613

@@ -1,0 +1,12 @@
+@relation arff_to_arff.arff
+
+@attribute age string
+@attribute spectacle-prescrip string
+@attribute astigmatism string
+@attribute tear-prod-rate string
+@attribute contact-lenses string
+
+@data
+young,myope,no,reduced,none
+young,myope,no,normal,soft
+young,myope,yes,reduced,none

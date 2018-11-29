@@ -24,4 +24,5 @@ class ArffWriter:
 
             file.write('@data\n')
             for row in dto.data:
-                file.write("{}".format(self.delimiter).join(row) + '\n')
+                file.write("{delimiter}".format(
+                    delimiter=self.delimiter).join(row) + '\n')

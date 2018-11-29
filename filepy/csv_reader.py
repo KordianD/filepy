@@ -1,3 +1,5 @@
+import re
+
 from filepy.dto import DTO
 
 
@@ -18,14 +20,15 @@ class CsvReader:
         for index, line in enumerate(open(self._path_to_file)):
             if index == 0 and self._first_line_column_names:
                 if self._skip_first_column:
-                    columns = line.strip().split(
-                        self._delimiter)[1:]
+                    columns = re.compile(
+                        self._delimiter).split(line.strip())[1:]
                 else:
-                    columns = line.strip().split(self._delimiter)
+                    columns = re.compile(self._delimiter).split(line.strip())
                 continue
             if self._skip_first_column:
-                data.append(line.strip().split(self._delimiter)[1:])
+                data.append(re.compile(
+                    self._delimiter).split(line.strip())[1:])
             else:
-                data.append(line.strip().split(self._delimiter))
+                data.append(re.compile(self._delimiter).split(line.strip()))
 
         self.dto = DTO(data=data, columns=columns)

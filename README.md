@@ -35,3 +35,43 @@ You want to convert this file to an arff format for instance `converted.arff`
     arff_writer = ArffWriter('converted.arff', delimiter=',')
 
     convert(input_reader=csv_reader, output_writer=arff_writer)
+    
+# Additional options
+
+Each writer and reader has additional options to use.
+
+# CsvReader
+CsvReader(path_to_file, delimiter = ',', first_line_column_names = True, skip_first_column = False)
+    
+    delimiter - how data is separated, can be regex
+    first_line_column_names - uses first line to read columns
+    skip_first_column - skips first column of data 
+
+After creating object you can get data from it.
+
+    csv_reader = CsvReader('your/path/to/file')
+    data = csv_reader.dto.data
+    column_names = csv_reader.dto.data
+
+# CsvWriter    
+CsvWriter(path_to_file, delimiter = ',', skip_writing_columns = False)
+
+    delimiter - how data will be separated in generated file
+    skip_writing_column - whether first line in generated file should have columns names
+   
+# ArffReader
+ArffReader(path_to_file, delimiter = ',')
+
+    delimiter - how data is separated, can be regex
+    
+After creating object you can get data from it.
+    
+    csv_reader = CsvReader('your/path/to/file')
+    data = csv_reader.dto.data
+    column_names = csv_reader.dto.columns
+    
+# ArffWriter
+ArffWriter(path_to_file, delimiter= ',')
+
+    delimiter - how data will be separated in generated file
+    

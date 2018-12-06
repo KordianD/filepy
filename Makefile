@@ -9,7 +9,6 @@ test:
 	py.test --cov  filepy test --cov-report term-missing
 	flake8 filepy test --max-line-length 120
 	pylint --rcfile=standard.rc --disable=missing-docstring filepy test
-	mypy --strict-optional filepy test
 	pyflakes .
 
 clean:

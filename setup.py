@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='filepy',
     packages=['filepy'],
-    version='0.15',
+    version='0.16',
     description='File converter to different extensions',
     author='KordianD',
     author_email='not_valid@gmail.com',

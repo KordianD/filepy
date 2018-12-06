@@ -27,3 +27,12 @@ def test_should_corectly_save_file_with_non_default_delimiter():
     csv_writer.write(TEST_DTO)
     assert filecmp.cmp(TEST_FILE, correct_file)
     os.remove(TEST_FILE)
+
+
+def test_should_corectly_save_file_when_skipping_writing_columns():
+    correct_file = 'test/data/csv_files/ft_csvWriter_3.csv'
+    csv_writer = CsvWriter(path_to_file=TEST_FILE, skip_writing_columns=True)
+
+    csv_writer.write(TEST_DTO)
+    assert filecmp.cmp(TEST_FILE, correct_file)
+    os.remove(TEST_FILE)

@@ -37,3 +37,15 @@ def test_should_correctly_read_csv_without_first_column():
                                    ['8.8', '63', '10.2'],
                                    ['10.5', '72', '16.4'],
                                    ['10.7', '81', '18.8']]
+
+
+def test_should_correctly_read_csv_without_first_column_and_without_column_labels():
+    csv_reader = CsvReader(TEST_FILENAME, skip_first_column=True, first_line_column_names=False)
+    assert csv_reader.dto.columns == []
+
+    assert csv_reader.dto.data == [['Girth (in)', 'Height (ft)', 'Volume (ft^3)'],
+                                   ['8.3', '70', '10.3'],
+                                   ['8.6', '65', '10.3'],
+                                   ['8.8', '63', '10.2'],
+                                   ['10.5', '72', '16.4'],
+                                   ['10.7', '81', '18.8']]

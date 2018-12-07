@@ -24,3 +24,15 @@ def test_correctly_read_when_comments_are_put_between_data_and_data_attribute():
     assert arff_reader.dto.data == [['young', 'myope', 'no', 'reduced', 'none'],
                                     ['young', 'myope', 'no', 'normal', 'soft'],
                                     ['young', 'myope', 'yes', 'reduced', 'none']]
+
+
+def test_correctly_read_when_lot_of_blank_lines_put_between_parts():
+    test_filename = 'test/data/arff_files/ft_arffReader_3.arff'
+    arff_reader = ArffReader(test_filename)
+    assert arff_reader.dto.additional['relation'] == 'iris'
+    assert arff_reader.dto.additional['attributes'] == ['NUMERIC', 'NUMERIC', 'NUMERIC', 'NUMERIC',
+                                                        '{Iris-setosa,Iris-versicolor,Iris-virginica}']
+
+    assert arff_reader.dto.data == [['5.0', '3.4', '1.5', '0.2', 'Iris-setosa'],
+                                    ['4.4', '2.9', '1.4', '0.2', 'Iris-setosa'],
+                                    ['4.9', '3.1', '1.5', '0.1', 'Iris-setosa']]

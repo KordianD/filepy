@@ -16,7 +16,7 @@ class ArffReader:
         additional: dict = {'relation': "", 'attributes': []}
 
         for line in open(self._path_to_file):
-            if line.strip() == [] or line.startswith('%'):
+            if not line.strip() or line.startswith('%'):
                 continue
             if is_line_containing_declaration(line, 'relation'):
                 additional['relation'] = line.split()[1]

@@ -51,7 +51,7 @@ After creating object you can get data from it.
 
     csv_reader = CsvReader('your/path/to/file')
     data = csv_reader.dto.data
-    column_names = csv_reader.dto.data
+    column_names = csv_reader.dto.columns
 
 # CsvWriter    
 CsvWriter(path_to_file, delimiter = ',', skip_writing_columns = False)
